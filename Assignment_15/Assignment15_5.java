@@ -1,0 +1,62 @@
+/* 5. Accept number of rows and number of columns from user and display below patern. 
+Input: iRow = 4   iCol = 4
+
+Output: 1  2  3  4
+        1  *  *  4
+        1  *  *  4
+        1  2  3  4
+*/
+
+import java.util.Scanner;
+
+
+class Pattern
+{
+    int iRow;
+    int iCol;
+
+    Pattern(int A, int B)
+    {
+        this.iRow = A;
+        this.iCol = B;
+    }
+
+    void Display()
+    {
+       for(int i = 1; i <= iRow; i++)
+       {
+         for(int j = 1; j <= iCol; j++)
+          {
+             if(i == 1 || j == 1  ||  i == iRow || j == iCol)
+             {
+                System.out.print(j+"  ");
+             }
+             else
+             {
+                System.out.print("*  ");
+             }
+          }
+
+          System.out.println();
+       }
+    }
+}
+
+
+class Assignment15_5
+{
+    public static void main(String[] args) 
+    {
+        Scanner sobj = new Scanner(System.in);
+
+        System.out.println("Enter no.of rows: ");
+        int iValue1 = sobj.nextInt();
+
+        System.out.println("Enter no.of column: ");
+        int iValue2 = sobj.nextInt();
+
+        Pattern pobj = new Pattern(iValue1, iValue2);
+
+        pobj.Display();
+    }
+}
