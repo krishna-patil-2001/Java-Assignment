@@ -1,0 +1,71 @@
+// 2. Accept single digit number from user and print it into word.
+
+import java.util.Scanner;
+
+class Number
+{
+   int iNo;
+
+   Number(int A)
+   {
+      this.iNo = A;
+   }
+    void Print()
+    {
+        if(iNo < 0)
+        {
+            iNo = -iNo;
+        }
+
+       switch(iNo)
+       {
+        case 0 : System.out.println("zero");
+        break;
+
+        case 1 : System.out.println("one");
+        break;
+
+        case 2 : System.out.println("two");
+        break;
+
+        case 3 : System.out.println("three");
+        break;
+
+        case 4 : System.out.println("four");
+        break;
+
+        case 5 : System.out.println("five");
+        break;
+
+        case 6 : System.out.println("six");
+        break;
+
+        case 7 : System.out.println("seven");
+        break;
+
+        case 8 : System.out.println("eight");
+        break;
+
+        case 9 : System.out.println("nine");
+        break;
+
+        default : System.out.println("Invalid Number..");
+       }
+    }
+ }
+
+
+class Assignment6_2
+{
+   public static void main(String[] args) 
+   {
+      Scanner sobj = new Scanner(System.in);
+
+      System.out.println("Enter Number: ");
+      int iValue = sobj.nextInt();
+
+      Number nobj = new Number(iValue);
+
+      nobj.Print();
+   }
+}
